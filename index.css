@@ -93,6 +93,9 @@ h6 {
 
 /*tablet */
 @media all and (max-width: 1000px) {
+  .albums { 
+    grid-template-columns: 1fr 1fr;
+  }
 
 }
 
