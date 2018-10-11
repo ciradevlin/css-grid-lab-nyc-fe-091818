@@ -1,3 +1,10 @@
+/*
+  Oh Hello!
+
+  These are some base styles so that our tutorial looks good.
+
+  Let's go through the important bits real quick
+*/
 :root {
   --yellow: #ffc600;
   --black: #272727;
@@ -6,6 +13,7 @@
 html {
   /* border-box box model allows us to add padding and border to our elements without increasing their size */
   box-sizing: border-box;
+  /* A system font stack so things load nice and quick! */
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
     Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-weight: 900;
@@ -14,6 +22,11 @@ html {
   text-shadow: 0 2px 0 rgba(0, 0, 0, 0.07);
 }
 
+/*
+  WAT IS THIS?!
+  We inherit box-sizing: border-box; from our <html> selector
+  Apparently this is a bit better than applying box-sizing: border-box; directly to the * selector
+*/
 *,
 *:before,
 *:after {
@@ -26,6 +39,7 @@ body {
   background-size: 340px, auto;
   min-height: calc(100vh - 100px);
   margin: 50px;
+  /* background: white; */
   background-attachment: fixed;
   letter-spacing: -1px;
 }
@@ -38,124 +52,42 @@ h5,
 h6 {
   margin: 0 0 5px 0;
 }
-
+/* Each item in our grid will contain numbers */
 .item {
+  /* We center the contents of these items. You can also do this with flexbox too! */
   display: grid;
   justify-content: center;
   align-items: center;
   border: 5px solid rgba(0, 0, 0, 0.03);
   border-radius: 3px;
   font-size: 35px;
-  background-color: var(--yellow);
+  background-color: var(--yellow); /* best colour */
 }
 
 .item p {
   margin: 0 0 5px 0;
 }
 
-.item-1 {
-  grid-area: header;
+.album__artwork {
+  width: 100%;
 }
 
-.item-2 {
-  grid-area: sidebar-1;
-  height: 600px;
-}
-
-.item-3 {
-  grid-area: main-content;
-  height: 600px;
-}
-
-.item-4 {
-  grid-area: sidebar-2;
-  height: 600px;
-}
-
-.item-5 {
-  grid-area: footer;
-}
-
-.container {
-  display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
-  grid-gap: 20px;
-  grid-template-areas: 
-    "header     header       header"
-    "sidebar-1  main-content sidebar-2"
-    "footer     footer       footer"
-}
-
-
-@media (max-width: 380px) {
-  .container {
-    grid-template-areas: 
-    "header     header       header"
-    "sidebar-1  sidebar-1 sidebar-1"
-    "main-content main-content main-content"
-    "sidebar-2 sidebar-2 sidebar-2"
-    "footer     footer       footer"
-  }
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0 0 5px 0;
-}
-
-.item {
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  border: 5px solid rgba(0, 0, 0, 0.03);
-  border-radius: 3px;
-  font-size: 35px;
-  background-color: var(--yellow);
-}
-
-.item p {
-  margin: 0 0 5px 0;
-}
-
-.item-1 {
-height: 500px;
+.albums {
 
 }
 
-.item-2 {
-
-  height: 100px;
+.album {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  color: white;
 }
 
-.item-3 {
-
-  height: 600px;
-}
-
-.item-4 {
-
-  height: 600px;
- 
-}
-
-.item-5 {
-
-  height: 600px;
+@media all and (max-width: 1000px) {
 
 }
 
+@media all and (max-width:500px) {
 
-
-.container {
-  display: grid;
-  grid-gap: 20px;
-  grid-template-columns: 100px, 100px, 100px; 
-
-  
-
-  
 }
+
