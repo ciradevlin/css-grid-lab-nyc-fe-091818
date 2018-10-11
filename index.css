@@ -86,7 +86,8 @@ h6 {
   padding: 20px;
   color: white;
   display: grid;
-  grid-auto-columns: 150px 150px; 
+  grid-template-columns: 150px 150px; 
+  grid-gap: 10px;
 }
 
 /*tablet */
