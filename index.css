@@ -85,6 +85,8 @@ h6 {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   padding: 20px;
   color: white;
+  display: grid;
+  grid-auto-columns: 1fr 1fr; 
 }
 
 /*tablet */
