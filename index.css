@@ -100,6 +100,9 @@ h6 {
 }
 
 @media all and (max-width:500px) {
+  .albums { 
+    grid-template-columns: 1fr;
+  }
 
 }
 
